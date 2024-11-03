@@ -17,3 +17,27 @@ steps:
     inputs:
       reportDir: '$(ResultsPath)/reportName.html'
 ```
+
+### 2023-05-10 - Fixed tab name
+
+This extension patches the original [HTML Viewer by Jakub Rumpca](https://marketplace.visualstudio.com/items?itemName=JakubRumpca.azure-pipelines-html-report) and resolves [#8 TabName incorrectly renders when using multi-stage pipelines](https://github.com/JakubRumpca/azure-pipeline-html-report/issues/8)
+
+Before fix:
+
+![githubIssue8.png](docs/githubIssue8.png)
+
+After fix:
+
+![githubIssue8-fixed.png](docs/githubIssue8-fixed.png)
+
+```yaml
+
+# tabName has a known bug w/multi-stages: https://github.com/JakubRumpca/azure-pipeline-html-report/issues/8
+- task: PublishHtmlReport@1
+  displayName: Publish E2E Test Report
+  condition: succeededOrFailed()
+  inputs:
+    reportDir: 'cypress/reports/index.html'
+    tabName: 'E2E ${{ parameters.region }}-${{ parameters.slotName }}'
+
+```
