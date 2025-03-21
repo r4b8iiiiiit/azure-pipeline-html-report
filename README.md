@@ -18,6 +18,8 @@ steps:
       reportDir: '$(ResultsPath)/reportName.html'
 ```
 
+### 2025-03-21 - Updated to Node 20 and dependencies
+
 ### 2023-05-10 - Fixed tab name
 
 This extension patches the original [HTML Viewer by Jakub Rumpca](https://marketplace.visualstudio.com/items?itemName=JakubRumpca.azure-pipelines-html-report) and resolves [#8 TabName incorrectly renders when using multi-stage pipelines](https://github.com/JakubRumpca/azure-pipeline-html-report/issues/8)

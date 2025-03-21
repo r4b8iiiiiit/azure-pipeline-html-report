@@ -5,16 +5,22 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.9.3",
+    "azure-devops-ui": "^2.254.0",
+    "azure-pipelines-task-lib": "^5.0.0",
+    "buffer": "^6.0.3",
     "cheerio": "^1.0.0-rc.3",
     "dashify": "^2.0.0",
     "fs": "0.0.2",
     "fs-extra": "^8.1.0",
-    "globby": "^11.0.0",
+    "globby": "^11.1.0",
     "hat": "0.0.3"
   },
-  "devDependencies": {},
   "scripts": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0"
+  }
 }

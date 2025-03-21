@@ -1,5 +1,5 @@
 {
-  "id": "95996f55-db4b-4370-8dd5-223a85bf691f",
+  "id": "2a612df4-2267-4057-b760-1be512a46083",
   "name": "PublishHtmlReport",
   "friendlyName": "Publish Html Report",
   "description": "Publish Html Report",
@@ -15,7 +15,7 @@
     "Minor": "0",
     "Patch": "14"
   },
-  "minimumAgentVersion": "1.95.0",
+  "minimumAgentVersion": "4.253.0",
   "instanceNameFormat": "Publish Html Report",
   "inputs": [
     {
@@ -36,7 +36,7 @@
     }
   ],
   "execution": {
-    "Node10": {
+    "Node20_1": {
       "target": "index.js",
       "argumentFormat": ""
     }

@@ -8,11 +8,21 @@ module.exports = {
     },
 
     resolve: {
+        fallback: {
+            buffer: require.resolve("buffer/"),
+        },
         extensions: [".ts", ".tsx", ".js"],
         alias: {
             "azure-devops-extension-sdk": path.resolve("node_modules/azure-devops-extension-sdk")
         },
     },
+    
+    output: {
+        filename: "[name].js", // Generates tabContent.js
+        path: path.resolve(__dirname, "dist"), // Output directory
+        publicPath: "dist/" // Ensures correct path for loading in the browser
+    },
+
     stats: {
         warnings: false
     },
@@ -42,10 +52,16 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new CopyWebpackPlugin([
-            { from: "*.html", context: "src/" },
-        ]),
-        new webpack.SourceMapDevToolPlugin({})
+    plugins: 
+    [
+        new CopyWebpackPlugin({
+    patterns: [
+        { from: "src/*.html", to: "[name][ext]" }, // Copies all .html files from src/ to dist/
+    ],
+}),
+        new webpack.SourceMapDevToolPlugin({}),
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'], // Polyfill Buffer globally
+        }),
     ]
 };
