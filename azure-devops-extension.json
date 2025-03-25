@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "r4b8iiiiiit-Azure-Pipeline-Html-Report-Updated",
     "publisher": "r4b8iiiiiitOS",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": "Jakub Rumpca,AwardedSolutions,r4b8iiiiiit",
     "name": "Html Viewer",
     "description": "Embed HTML report in Azure Pipelines - patches Jakub Rumpca,AwardedSolutions - Updated",
