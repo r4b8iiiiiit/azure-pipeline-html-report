@@ -13,9 +13,9 @@
   "version": {
     "Major": "1",
     "Minor": "0",
-    "Patch": "14"
+    "Patch": "15"
   },
-  "minimumAgentVersion": "4.253.0",
+  "minimumAgentVersion": "4.252.0",
   "instanceNameFormat": "Publish Html Report",
   "inputs": [
     {
