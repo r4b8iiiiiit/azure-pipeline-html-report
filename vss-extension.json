@@ -5,7 +5,7 @@
     "description": "Embed HTML report in Azure Pipelines - patches Jakub Rumpca,AwardedSolutions - Updated",
     "publisher": "r4b8iiiiiitOS",
     "author": "Jakub Rumpca,AwardedSolutions,r4b8iiiiiit",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "public": false,
     "categories": ["Azure Pipelines"],
     "icons": {
